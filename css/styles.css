@@ -1,52 +1,231 @@
-
-/* Global Reset */
+/* =============================
+   GENERAL RESET & BASE STYLING
+============================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light gray background for contrast */
+    color: #111;
     line-height: 1.6;
 }
 
-/* Navigation Bar */
+/* =============================
+   NAVIGATION BAR
+============================= */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #222;
-    padding: 1rem;
+    padding: 1rem 3rem;
+    background-color: #111; /* black background */
+    color: #00c853; /* green accent color */
+    flex-wrap: wrap;
 }
 
-/* Logo Styling */
-.logo {
-    background-color: #4CAF50;
-    color: white;
-    font-weight: bold;
-    padding: 10px;
-}
-
-/* Navigation Links */
-.nav-links {
-    list-style: none;
+.navbar .logo {
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.nav-links li {
-    margin-left: 15px;
+.navbar .logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #00c853;
 }
 
-.nav-links a {
-    color: white;
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar .nav-links li a {
+    color: #00c853;
     text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
-/* Footer */
+.navbar .nav-links li a:hover {
+    color: #ffffff;
+}
+
+/* =============================
+   HEADERS & MAIN SECTIONS
+============================= */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+h3 {
+    color: #00c853;
+    margin-bottom: 0.5rem;
+}
+
+/* =============================
+   HOME PAGE BUTTONS
+============================= */
+a.button, main a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #00c853;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+a.button:hover, main a:hover {
+    background-color: #007d32;
+}
+
+/* =============================
+   ABOUT ME PAGE
+============================= */
+main img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 1rem;
+    border: 3px solid #00c853;
+}
+
+/* =============================
+   PROJECTS PAGE
+============================= */
+.project {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* =============================
+   SERVICES PAGE
+============================= */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background-color: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-left: 5px solid #00c853;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* =============================
+   CONTACT PAGE FORM
+============================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+form input, form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #00c853;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #007d32;
+}
+
+/* =============================
+   FOOTER
+============================= */
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
+    padding: 1.5rem;
+    background-color: #111;
+    color: #00c853;
+    margin-top: 2rem;
+}
+
+/* =============================
+   RESPONSIVE STYLING
+============================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    .project img {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .navbar .logo img {
+        width: 40px;
+        height: 40px;
+    }
 }

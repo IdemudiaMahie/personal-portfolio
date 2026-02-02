@@ -1,55 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Contact Me | Osamahiemen Idemudia</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <span>
-                <img src="images/logo.PNG">
-            </span>
-            <span>
-                Osamahiemen Idemudia
-            </span>
+<body class="contact-page">
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <span>
+                    <img src="images/logo.PNG">
+                </span>
+                <span>
+                    Osamahiemen Idemudia
+                </span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contact Me</h1>
+
+        <div class="contact-wrapper">
+            <section class="contact-info">
+                <div class="contact-item">
+                    <span>Email:</span>
+                    <a href="mailto:idemudiamahie23@gmail.com">idemudiamahie23@gmail.com</a>
+                </div>
+
+                <div class="contact-item">
+                    <span>Phone:</span>
+                    <span>+234 703 2737 284</span>
+                </div>
+
+                <div class="contact-item">
+                    <span>LinkedIn:</span>
+                    <a href="https://www.linkedin.com/in/mahie-idemudia" target="_blank">
+                        mahie-idemudia
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <span>GitHub:</span>
+                    <a href="https://github.com/IdemudiaMahie" target="_blank">
+                        IdemudiaMahie
+                    </a>
+                </div>
+
+                <div class="contact-item">
+                    <span>X (Twitter):</span>
+                    <span>@mahie_id</span>
+                </div>
+            </section>
+
+            <form action="index.html" method="GET">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="phone" placeholder="Contact Number">
+                <textarea name="message" placeholder="Write your message here..." required></textarea>
+            </form>
         </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact Me</a></li>
-        </ul>
-    </nav>
-</header>
+    </main>
 
-<main>
-    <h1>Contact Me</h1>
-
-    <section>
-    <p>Email: <a href="mailto:idemudiamahie23@gmail.com">idemudiamahie23@gmail.com</a></p>
-    <p>Phone: +234 703 2737 284</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/mahie-id" target="_blank">mahie-idemudia</a></p>
-    <p>GitHub: <a href="https://github.com/IdemudiaMahie" target="_blank">IdemudiaMahie</a></p>
-    <p>X (Twitter): @mahie_id</p>
-</section>
-
-    <form action="index.html" method="GET">
-        <input type="text" name="firstName" placeholder="First Name" required>
-<input type="text" name="lastName" placeholder="Last Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<input type="text" name="phone" placeholder="Contact Number">
-<textarea name="message" placeholder="Write your message here..." required></textarea>
-    </form>
-</main>
-
-<footer>
-    <p>&copy; 2026 Osamahiemen Idemudia</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Osamahiemen Idemudia</p>
+    </footer>
 
 </body>
+
 </html>

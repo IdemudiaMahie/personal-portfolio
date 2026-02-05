@@ -280,6 +280,7 @@ body.services-page main ul li {
   border-radius: 6px;
   background: rgba(0, 200, 83, 0.1);
   transition: all 0.3s ease;
+  margin: 0;
 }
 
 .contact-item a:hover {

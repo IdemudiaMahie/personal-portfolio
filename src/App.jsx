@@ -1,10 +1,15 @@
 import './App.css'
+import NavBar from './components/NavBar'
+import Content from './components/Content'
+import Footer from './components/Footer'
 
 function App() {
 
   return (
     <>
-      //INput code Here
+      <NavBar />
+      <Content />
+      <Footer />
     </>
   )
 }

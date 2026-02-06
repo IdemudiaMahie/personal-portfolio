@@ -1,9 +1,12 @@
-import React from 'react'
 
 function Footer() {
+    const currentYear = new Date().getFullYear();
+    
   return (
-    <div>Footer</div>
-  )
+    <footer>
+      <p>&copy; {currentYear} Osamahiemen Idemudia</p>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

@@ -94,7 +94,7 @@ body.home-page::before {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .nav-links a {

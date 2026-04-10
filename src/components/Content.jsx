@@ -6,6 +6,8 @@ import Services from '../pages/Services';
 import Contact from '../pages/Contact';
 import NotFound from '../pages/NotFound';
 import bgImage from '../assets/img/pexels-photo-14553705.jpeg';
+import AddProject from '../pages/projects/AddProject';
+import EditProject from '../pages/projects/EditProject';
 
 function Content() {
   return (
@@ -25,6 +27,8 @@ function Content() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/projects" element={<Projects />} />
+        <Route path="/projects/add" element={<AddProject />} />
+        <Route path="/projects/edit/:id" element={<EditProject />} />
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />

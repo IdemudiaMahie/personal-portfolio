@@ -8,6 +8,8 @@ import NotFound from '../pages/NotFound';
 import bgImage from '../assets/img/pexels-photo-14553705.jpeg';
 import AddProject from '../pages/projects/AddProject';
 import EditProject from '../pages/projects/EditProject';
+import AddService from '../pages/services/AddService';
+import EditService from '../pages/services/EditService';
 
 function Content() {
   return (
@@ -30,6 +32,8 @@ function Content() {
         <Route path="/projects/add" element={<AddProject />} />
         <Route path="/projects/edit/:id" element={<EditProject />} />
         <Route exact path="/services" element={<Services />} />
+        <Route path="/services/add" element={<AddService />} />
+        <Route path="/services/edit/:id" element={<EditService />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

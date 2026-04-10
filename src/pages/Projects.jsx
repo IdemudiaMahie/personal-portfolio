@@ -1,31 +1,46 @@
-import WeatherApp from '../assets/img/WeatherApp Image.png'
-import contactManagerApp from '../assets/img/contact-manager-app.jpg'
-import recipeApp from '../assets/img/recipe app.png'
+import { useEffect, useState } from "react";
+import { list, remove } from "../datasource/api-projects";
+import { Link } from "react-router-dom";
+// import WeatherApp from '../assets/img/WeatherApp Image.png'
+// import contactManagerApp from '../assets/img/contact-manager-app.jpg'
+// import recipeApp from '../assets/img/recipe app.png'
 
-function projects() {
+function Projects() {
+    const [projects, setProjects] = useState([]);
+
+    const loadProjects = () => {
+        list().then(res => {
+            if (res.success) setProjects(res.data);
+        });
+    };
+
+    useEffect(() => {
+        loadProjects();
+    }, []);
+
+    const handleDelete = (id) => {
+        if (window.confirm("Delete this project?")) {
+            remove(id).then(() => loadProjects());
+        }
+    };
+
     return (
         <>
             <h1>Projects</h1>
 
-            <section className="project">
-                <img src={WeatherApp} alt="Weather App" />
-                    <h3>Weather App</h3>
-                    <p>Developed a responsive weather application using ReactJS and Vanilla JavaScript that displays current weather conditions and forecasts. Focused on usability and clean design.</p>
-            </section>
+            <Link to="/projects/add">Add Project</Link>
 
-            <section className="project">
-                <img src={contactManagerApp} alt="Contact Manager App" />
-                    <h3>Contact Manager App</h3>
-                    <p>Built a full-stack Node.js & MongoDB application allowing users to manage contacts with features like create, update, delete, and authentication. Demonstrated backend integration and secure data handling.</p>
-            </section>
+            {projects.map(project => (
+                <div key={project.id} className="project">
+                    <h3>{project.title}</h3>
+                    <p>{project.description}</p>
 
-            <section className="project">
-                <img src={recipeApp} alt="Recipe App" />
-                    <h3>Recipe App (MERN)</h3>
-                    <p>Developed a full-stack MERN recipe app enabling users to view recipes and calculate meal costs. Highlighted skills in React, Express, Node.js, and MongoDB integration.</p>
-            </section>
+                    <Link to={`/projects/edit/${project.id}`}>Edit</Link>
+                    <button onClick={() => handleDelete(project.id)}>Delete</button>
+                </div>
+            ))}
         </>
-    )
+    );
 }
 
-export default projects
+export default Projects;

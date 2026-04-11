@@ -10,6 +10,8 @@ import AddProject from '../pages/projects/AddProject';
 import EditProject from '../pages/projects/EditProject';
 import AddService from '../pages/services/AddService';
 import EditService from '../pages/services/EditService';
+import ListUser from '../pages/users/ListUser';
+import EditUser from '../pages/users/EditUser';
 
 function Content() {
   return (
@@ -35,6 +37,8 @@ function Content() {
         <Route path="/services/add" element={<AddService />} />
         <Route path="/services/edit/:id" element={<EditService />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route path="/users/list" element={<ListUser />} />
+        <Route path="/users/edit/:id" element={<EditUser />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>

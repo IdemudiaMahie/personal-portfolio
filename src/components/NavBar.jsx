@@ -14,6 +14,7 @@ function NavBar() {
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/contact">Contact Me</Link></li>
+          {/* <li><Link to="/users/list">Manage Users</Link></li> */}
         </ul>
       </nav>
     </header>

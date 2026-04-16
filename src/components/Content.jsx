@@ -12,6 +12,9 @@ import AddService from '../pages/services/AddService';
 import EditService from '../pages/services/EditService';
 import ListUser from '../pages/users/ListUser';
 import EditUser from '../pages/users/EditUser';
+import References from '../pages/references/References';
+import AddReference from '../pages/references/AddReference';
+import EditReference from '../pages/references/EditReference';
 
 function Content() {
   return (
@@ -39,6 +42,9 @@ function Content() {
         <Route exact path="/contact" element={<Contact />} />
         <Route path="/users/list" element={<ListUser />} />
         <Route path="/users/edit/:id" element={<EditUser />} />
+        <Route path="/references" element={<References />} />
+        <Route path="/references/add" element={<AddReference />} />
+        <Route path="/references/edit/:id" element={<EditReference />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>

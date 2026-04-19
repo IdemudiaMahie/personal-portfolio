@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { list, remove } from "../../datasource/api-references";
+import { list, remove } from "../datasource/api-references";
 import { Link } from "react-router-dom";
 
 function References() {
